@@ -1,0 +1,54 @@
+backend:
+  name: github
+  repo: "JuanBarreiroSanroman/Prueba_Hugo_Decap_VariosTemas"  # Reemplaza con tu usuario y nombre del repositorio
+
+  branch: master  # O la rama que estés usando, como "master"
+  auth_scope: "repo"  # Esto otorga acceso completo a tu repositorio
+  api_root: "https://api.github.com"  # Si es necesario especificar la URL API
+  token: "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 "  # Deberás crear un token de acceso personal en GitHub (ver paso 2)
+
+media_folder: "static/uploads" # Carpeta común para subir archivos multimedia
+public_folder: "/uploads"
+
+collections:
+  - name: "web1"
+    label: "Hugo Decap Web1"
+    files:
+      - name: "posts"
+        label: "Posts"
+        folder: "Hugo_Decap_Web1/content/post"
+        create: true
+        slug: "{{slug}}"
+        fields:
+          - { label: "Título", name: "title", widget: "string" }
+          - { label: "Fecha", name: "date", widget: "datetime", default: "" }
+          - { label: "Borrador", name: "draft", widget: "boolean", default: false }
+          - { label: "Contenido", name: "body", widget: "markdown" }
+
+  - name: "web2"
+    label: "Hugo Decap Web2"
+    files:
+      - name: "posts"
+        label: "Posts"
+        folder: "Hugo_Decap_Web2/content/post"
+        create: true
+        slug: "{{slug}}"
+        fields:
+          - { label: "Título", name: "title", widget: "string" }
+          - { label: "Fecha", name: "date", widget: "datetime", default: "" }
+          - { label: "Borrador", name: "draft", widget: "boolean", default: false }
+          - { label: "Contenido", name: "body", widget: "markdown" }
+
+  - name: "web3"
+    label: "Hugo Decap Web3"
+    files:
+      - name: "posts"
+        label: "Posts"
+        folder: "Hugo_Decap_Web3/content/post"
+        create: true
+        slug: "{{slug}}"
+        fields:
+          - { label: "Título", name: "title", widget: "string" }
+          - { label: "Fecha", name: "date", widget: "datetime", default: "" }
+          - { label: "Borrador", name: "draft", widget: "boolean", default: false }
+          - { label: "Contenido", name: "body", widget: "markdown" }
